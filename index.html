@@ -1,47 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stars Mind Portal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stars Mind Portal</title>
+  <style>
+    body {
+      background-color: #000000;
+      font-family: 'Courier New', Courier, monospace;
+      color: #00ff2a;
+      margin: 0;
+      padding: 50px;
+      text-align: center;
+    }
+    h1 {
+      color: #2bff00;
+      text-align: center;
+      font-size: 48px;
+    }
+    h2 {
+      color: #3ab929;
+      text-align: left;
+      font-size: 15px;
+    }
+    p {
+      font-size: 24px;
+    }
+    a {
+      color: #3ab929;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    input {
+      background-color: black;
+      color: green;
+      border: 3px solid green;
+      padding: 15px;
+      font-family: monospace;
+      width: 400px;
+      font-size: 32px;
+      margin-top: 20px;
+    }
+    button {
+      background-color: green;
+      color: black;
+      border: none;
+      padding: 15px 30px;
+      cursor: pointer;
+      font-family: monospace;
+      font-size: 32px;
+      margin-left: 10px;
+    }
+    img {
+      margin-top: 30px;
+      max-width: 100%;
+      height: auto;
+      border: 3px solid green;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: x-small;
+      color: #ff0000;
+    }
+  </style>
 </head>
 <body>
-    <style>
-        body {
-            background-color: #000000;
-            font-family: 'Courier New', Courier, monospace;
-            color: #00ff2a;
-        }
-        h1 {
-            color: #29f40065;
-        }
-        a {
-            color: #3ab929;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            margin-top: 20px;
-            font-size: 0.8em;
-            color: #ff0000;
-        }
-    </style>
-    <div class="container">
-        <p>All assets initialized<br>
-            FreeDOS - Version 1.045<br>
-            FreeDOSHealthcheck - Integrity low<br>
-            Currently running: <s>STARS</s>MIND<s>PORTAL</s>.EXE<br>
-            Run help in program load to learn more!</p>
-    </div>
+  <div class="container">
+    <h2>
+      All assets initialized<br />
+      FreeDOS - Version 1.045<br />
+      FreeDOSHealthcheck - Integrity low<br />
+      Currently running: <s>STARS</s>MIND<s>PORTAL</s>.EXE<br />
+      Run help in program load to learn more!
+    </h2>
+  </div>
 
-        <header>GO. THROUGH. IT.</header>
+  <header><h1>G O. T H R O U G H. I T.</h1></header>
 
-     <img src="https://cdn.discordapp.com/attachments/973784389530046474/1397015684348776611/portal.gif?ex=68802fbe&is=687ede3e&hm=03dfa3f484d0d4a9f44b215bf41063951bf8f09e1a9f5a5928b33ed21eeab2fc&" alt="alternatetext">
 
-        <header> PROGRAM. LOAD.</header>
-    <footer>
-        <p>&copy; 2025 Starwber car</p>
-    </footer>
+  <!--Link attached to Portal image-->
+<a href="prisonhomepage.html">
+    <img src="portal.gif" alt="portal image"></a>
+
+  <header><h1>P R O G R A M. L O A D.</h1></header>
+
+  <!-- Interactive input section -->
+  <p>&gt;_</p>
+  <input type="text" id="userInput" placeholder="Input program name.." />
+  <button onclick="checkInput()">S E N D.</button>
+  <div id="linkContainer"></div>
+
+  <footer>
+    <footer>&copy; 2025 The Mind Prison</footer>
+  </footer>
+
+  <script>
+    function checkInput() {
+      var input = document.getElementById("userInput").value.trim().toLowerCase();
+      var linkContainer = document.getElementById("linkContainer");
+      linkContainer.innerHTML = ""; // Clear previous output
+
+      if (input === "i still care") {
+        var link = document.createElement("a");
+        link.href = "https://sites.google.com/view/liminals-mind-chamber/home";
+        link.textContent = "Access Granted - Chapter 2 link unlocked.. Click this to load CHAPTER2.EXE";
+        link.target = "_blank";
+        linkContainer.appendChild(link);
+
+      } else if (input === "they will come") {
+        var anchor = document.createElement("a");
+        anchor.href = "https://sites.google.com/view/theywillcome/home";
+        anchor.target = "_blank";
+        var img = document.createElement("img");
+        img.src = "https://cdn.discordapp.com/attachments/973784389530046474/1372717272313102346/image.png?ex=6827ca15&is=68267895&hm=676f78f255e85b3b938ce561c574d3146ba04ebdef7ba159c6258f64a676117e&";
+        img.alt = "mannequin";
+        anchor.appendChild(img);
+        linkContainer.appendChild(anchor);
+
+      } else if (input === "amon") {
+        var mindLink = document.createElement("a");
+        mindLink.href = "https://sites.google.com/view/mindbasedata1/home";
+        mindLink.textContent = "PROFILE FOUND... LAUNCHING PROFILE";
+        mindLink.target = "_blank";
+        linkContainer.appendChild(mindLink);
+
+      } else if (input === "angelwings") {
+        var angelLink = document.createElement("a");
+        angelLink.href = "https://sites.google.com/view/starsmindprison/hiddencode-angel";
+        angelLink.textContent = "ANGELWINGS PROTOCOL INITIATED";
+        angelLink.target = "_blank";
+        linkContainer.appendChild(angelLink);
+
+      } else {
+        alert("N O.");
+      }
+    }
+  </script>
+</body>
+</html>

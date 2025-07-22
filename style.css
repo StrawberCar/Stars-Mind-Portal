@@ -1,5 +1,5 @@
 img{
-align-content: center;
+    align-content: center;
     display: block;
     margin: 0 auto;
     max-width: 100%;
@@ -9,6 +9,13 @@ align-content: center;
 header {
     text-align: center;
     font-size: 5em;
+    color: #00ff2a;
+    margin-top: 20px;
+}
+
+h2 {
+    align-content: left;
+    font-size: 2em;
     color: #00ff2a;
     margin-top: 20px;
 }
