@@ -19,3 +19,9 @@ h2 {
     color: #00ff2a;
     margin-top: 20px;
 }
+
+#PortalGif {
+    background-image: url('dreamcoreeyes.jpg');
+    background-size: cover;
+    background-position: center;
+}
