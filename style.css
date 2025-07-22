@@ -1,0 +1,14 @@
+img{
+align-content: center;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    text-align: center;
+    font-size: 5em;
+    color: #00ff2a;
+    margin-top: 20px;
+}
